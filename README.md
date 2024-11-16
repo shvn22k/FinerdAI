@@ -44,7 +44,7 @@ Because the youth deserves better. Finerd is here to crush financial anxiety and
 ## **How to Get Started 🚀**  
 1. **Clone this repo**:  
    ```bash  
-   git clone https://github.com/yourusername/FinerdAI.git   
+   git clone https://github.com/shvn22k/FinerdAI.git   
    ```  
 2. **Install dependencies** (use Node.js):  
    ```bash  
