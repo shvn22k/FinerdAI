@@ -60,6 +60,7 @@ Because the youth deserves better. Finerd is here to crush financial anxiety and
    ```
 
 Before all that, dont forget to make a ```.env``` file and put your gemini api key there as ```GOOGLE_API_KEY```.
+Also, if you see any external api key in the code, dw we've deactivated all of it ^_^
 
 
 ---
