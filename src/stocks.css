@@ -1,0 +1,186 @@
+/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Host+Grotesk:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background: radial-gradient(#186a5e, #053339);
+  min-height: 100vh;
+  position: relative;
+  color: #e1eeeb;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #021619;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo section styles */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.finerd-text {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #c1e2dd;
+  letter-spacing: 0.07em;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: 'Host Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #4df8df !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: color 0.3s ease;
+  -webkit-text-fill-color: #c1e2dd;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4df8df;
+  transition: width 0.2s ease-in;
+}
+
+.nav-links a:hover {
+  color: #4df0f8;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Main content styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Stock prices container */
+.stock-prices {
+  background: #12352f;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+/* Finlogix Ticker and News Container */
+.finlogix-container {
+  background-color: #021619; /* Ticker background color */
+  padding: 10px; /* Padding for ticker */
+  border-radius: 5px; /* Optional rounded corners */
+  margin-bottom: 20px; /* Space between ticker and news */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-in-out forwards;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for hover effect */
+}
+
+/* Hover effect for ticker */
+.finlogix-container:hover {
+  transform: translateY(-5px); /* Pop-up effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow beneath */
+}
+
+/* Finlogix News Widget */
+.finlogix-widget-container {
+  margin-top: 20px; /* Adds gap above the news widget */
+  background-color: #f4f4f4; /* Background color for the news widget */
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for visual depth */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+
+/* Remove the unwanted white bar (if applicable) */
+.finlogix-news-container {
+  display: none !important; /* Hides the unwanted white bar at the bottom */
+}
+
+/* Slide-up and opacity transition keyframes */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* News section styles */
+.news-section {
+  background: #12352f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-in-out forwards;
+}
+
+.news-section h2 {
+  margin-bottom: 1rem;
+}
+
+.news-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.news-item {
+  background: #061e1a;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.news-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.news-item p {
+  font-size: 1rem;
+  color: #555;
+}

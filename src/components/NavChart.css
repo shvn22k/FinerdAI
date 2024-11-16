@@ -1,0 +1,43 @@
+.nav-chart-container {
+    background: radial-gradient(circle, #186a5e, #053339);
+    padding: 20px;
+    border-radius: 10px;
+    color: #e1eeeb;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #4df8df;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .fund-select {
+    background-color: #021619;
+    color: #c1e2dd;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 300px;
+    outline: none;
+  }
+  
+  .fund-select:hover,
+  .fund-select:focus {
+    border: 1px solid #4df8df;
+  }
+  
+  .chart {
+    background-color: #021619;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(77, 248, 223, 0.2);
+  }
+  
+  

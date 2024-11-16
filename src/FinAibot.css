@@ -1,0 +1,338 @@
+/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Host+Grotesk:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: radial-gradient(#186a5e, #053339);
+    min-height: 100vh;
+    position: relative;
+    color: #e1eeeb;
+}
+
+/* Navigation styles - copied from first file */
+nav {
+    background-color: #021619;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Updated logo section styles */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 35px;
+    width: auto;
+    margin-right: 5px;  /* Add specific margin to the logo */
+}
+
+.finerd-text {
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #c1e2dd;
+    letter-spacing: 0.07em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-family: 'Host Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #4df8df !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color 0.3s ease;
+    -webkit-text-fill-color: #c1e2dd;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4df8df;
+    transition: width 0.2s ease-in;
+}
+
+.nav-links a:hover {
+    color: #4df0f8;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Main content container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat container */
+.chat-container {
+    background: radial-gradient(#0b201d, #021619);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    transform: translateY(-4px);
+    border: 2px solid #54a399;
+    margin-top: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    margin-bottom: 1rem;
+    min-height: 200px;
+    max-height: calc(100vh - 300px);
+    transition: scrollbar-color 0.3s ease;
+    padding-right: 0.5rem;
+}
+
+.message-container {
+    position: relative;
+    margin: 1rem 0;
+    max-width: 80%;
+}
+
+.message-container.ml-auto {
+    margin-left: auto;
+}
+
+.message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    word-wrap: break-word;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-message {
+    font-weight: bold;
+    background: linear-gradient(#4df8df, #4df0f8);
+    color: #221c18;
+    margin-left: auto;
+    transform-origin: right center;
+    border: 1px solid #46cebe;
+}
+
+.bot-message {
+    font-weight: bold;
+    background: #12352f;
+    color: #edfcfa;
+    transform-origin: left center;
+    position: relative;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+}
+
+.message:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Copy button styles */
+.copy-button {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    background: none;
+    border: none;
+    padding: 4px;
+    font-size: 0.75rem;
+    color: #54a399;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.copy-button:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    color: #4df8df;
+}
+
+/* Typewriter effect */
+.typewriter-text {
+    display: inline-block;
+    position: relative;
+    min-height: 1.2em;
+}
+
+.typewriter-text::after {
+    content: '▋';
+    position: relative;
+    display: inline-block;
+    color: #4df8df;
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.typing {
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+/* Input section */
+.input-section {
+    margin-top: auto;
+    border-top: 1px solid #54a399;
+}
+
+/* Tab styles */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    background: #12352f;
+    border: none;
+    border-radius: 8px;
+    color: #edfcfa;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: #051715;
+    color: #c6f4f2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Chat input */
+.chat-input {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #54a399;
+    border-radius: 8px;
+    background: #192f2b;
+    color: #d1f0ec;
+    font-size: 1rem;
+}
+
+.chat-input input::placeholder {
+    color: rgba(193, 226, 221, 0.5);
+}
+
+.chat-input button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #54a399;
+    color: #061e1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #3c8379;
+    transform: translateY(-2px);
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: none;
+    color: #c6f4f2;
+    padding: 0.5rem 1rem;
+}
+
+.typing-indicator.active {
+    display: block;
+}
+
+/* Custom scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.chat-messages:hover::-webkit-scrollbar-thumb {
+    background: rgba(84, 163, 153, 0.2);
+}
+
+.chat-messages:hover::-webkit-scrollbar-thumb:hover {
+    background: rgba(84, 163, 153, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    
+    .chat-container {
+        padding: 1rem;
+    }
+    
+    .message-container {
+        max-width: 90%;
+    }
+
+    .bot-message {
+        padding-right: 1rem;
+    }
+}

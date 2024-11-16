@@ -1,0 +1,238 @@
+.calculator-container {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #186a5e 0%, #053339 100%);
+  }
+  
+  /* Navigation Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #021619;
+  }
+  
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-title {
+    color: #4df8df;
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: #c1e2dd;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-link:hover {
+    opacity: 0.8;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .calculator-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .calculator-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Input Section Styles */
+  .input-section {
+    background-color: #12352f;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #186a5e;
+  }
+  
+  .calculator-title {
+    color: #4df8df;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .calculator-subtitle {
+    color: #c1e2dd;
+    margin-bottom: 2rem;
+  }
+  
+  .input-fields {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-group label {
+    color: #4df8df;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .input-group input {
+    background-color: #021619;
+    border: 1px solid #186a5e;
+    color: #e1eeeb;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .input-group input:focus {
+    border-color: #4df8df;
+  }
+  
+  .calculate-button {
+    width: 100%;
+    background-color: #186a5e;
+    color: #4df8df;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .calculate-button:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+  
+  .calculate-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Results Section Styles */
+  .results-section {
+    background-color: #12352f;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #186a5e;
+  }
+  
+  .score-card {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .score-card h2 {
+    color: #4df8df;
+    margin-bottom: 1rem;
+  }
+  
+  .score-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .score-circle span {
+    color: #186a5e;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .metric-card {
+    background-color: #021619;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .metric-card h3 {
+    color: #4df8df;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-value {
+    color: #e1eeeb;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .recommendations-section {
+    background-color: #021619;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .recommendations-section h3 {
+    color: #4df8df;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recommendations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recommendations-list li {
+    color: #c1e2dd;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .recommendations-list li:before {
+    content: "•";
+    color: #4df8df;
+    position: absolute;
+  }
