@@ -59,6 +59,9 @@ Because the youth deserves better. Finerd is here to crush financial anxiety and
    uvicorn {pyfile}:app --reload
    ```
 
+Before all that, dont forget to make a ```.env``` file and put your gemini api key there as ```GOOGLE_API_KEY```.
+
+
 ---
 
 ## **Let’s Collaborate 🤝**  
